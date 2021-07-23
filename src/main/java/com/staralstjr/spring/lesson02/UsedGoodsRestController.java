@@ -22,3 +22,4 @@ public class UsedGoodsRestController {
 	}
 
 }
+// Controller <- BO <- DAO <- xml
