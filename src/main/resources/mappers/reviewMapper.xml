@@ -20,6 +20,57 @@
  			`id` = #{id}
  	
  	</select>
+ 	
+ 	<insert id="insertReview" parameterType="map">
+ 		INSERT INTO `new_review`
+ 		(
+ 			  `storeId`
+ 			, `menu`
+ 			, `userName`
+ 			, `point`
+ 			, `review`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		) VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, now()
+ 			, now() <!-- {}안에 값은 위에 insert into와 같을 필요 없다. dao의 정보를 사용하는 것이기 때문에 
+ 								dao의 값과 같게 해야한다. -->
+ 		)
+ 		
+ 		
+ 	
+ 	</insert>
+ 	
+ 	<insert id="insertReviewFromObject" parameterType="map">
+ 		INSERT INTO `new_review`
+ 		(
+ 			  `storeId`
+ 			, `menu`
+ 			, `userName`
+ 			, `point`
+ 			, `review`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		) VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, now()
+ 			, now() 
+ 		)
+ 		
+ 		
+ 	
+ 	</insert>
  
  
  </mapper>
