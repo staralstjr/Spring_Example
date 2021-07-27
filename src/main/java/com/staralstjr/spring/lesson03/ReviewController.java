@@ -45,5 +45,24 @@ public class ReviewController {
 		int count = reviewBO.addReview(review);
 		
 		return "insert success " + count;
+		
+	}
+	
+	// update
+	@RequestMapping("/lesson03/ex03")
+	public String ex03(
+			@RequestParam("id") int id
+			, @RequestParam("review") String review) {
+		
+		int count = reviewBO.updateReviewById(id, review);
+		return "update 성공 : " + count;
+	}
+	
+	// delete
+	@RequestMapping("/lesson03/ex04")
+	public String ex04(
+			@RequestParam("id") int id) {
+		int count = reviewBO.deleteReviewById(id);
+		return "delete 성공 : " + count;
 	}
 }

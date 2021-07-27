@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
+<title>INSERT 성공!</title>
 </head>
 <body>
-	<h1>Hi</h1>
+
 </body>
 </html>

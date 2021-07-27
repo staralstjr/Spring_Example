@@ -23,4 +23,14 @@ public class ReviewBO {
 	public int addReview(Review review) {
 		return reviewDAO.insertReviewFromObject(review);
 	}
+	
+	// update
+	public int updateReviewById(int id, String review) {
+		return reviewDAO.updateReviewById(id, review);
+	}
+	
+	// delete
+	public int deleteReviewById(int id) {
+		return reviewDAO.deleteReviewById(id);
+	}
 }
